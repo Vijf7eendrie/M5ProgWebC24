@@ -23,7 +23,7 @@ services:
       - php
   # MariaDB Service
   mariadb:
-    #image: mysql:latest
+    image: mysql:latest
     environment:
       MYSQL_DATABASE: ${DB_SCHEMA_NAME}
       MYSQL_USER: ${DB_USER}
@@ -37,7 +37,7 @@ services:
     image: phpmyadmin/phpmyadmin
     environment:
       PMA_HOST: ${DB_HOST}
-      PMA_USER: ${${DB_USER}
+      PMA_USER: ${DB_USER}
       PMA_PASSWORD: ${DB_PASSWORD}
     ports:
       - "1088:80"
